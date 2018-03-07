@@ -10,10 +10,10 @@ Pod::Spec.new do |s|
 美呗 APP 上需要用到的cordova 的代码, 插件不包含在内, 需要手动拖到项目中.
                        DESC
 
-  s.homepage         = 'https://github.com/hz/MebCordova'
+  s.homepage         = 'https://github.com/titer/MebCordova'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'hz' => 'zhaohong1991@hotmail.com' }
-  s.source           = { :git => 'https://github.com/hz/MebCordova.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/titer/MebCordova.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
 

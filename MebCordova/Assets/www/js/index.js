@@ -856,9 +856,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @param {*} offset 
  */
 function limitBy(n, offset) {
-  offset = offset ? parseInt(offset, 10) : 0;
-  n = parseInt(n);
-  return typeof n === 'number' ? this.slice(offset, offset + n) : this;
+    offset = offset ? parseInt(offset, 10) : 0;
+    n = parseInt(n);
+    return typeof n === 'number' ? this.slice(offset, offset + n) : this;
 }
 
 /**
@@ -866,9 +866,26 @@ function limitBy(n, offset) {
  * @param {*} n 
  */
 function skipBy(n) {
-  n = parseInt(n);
-  return typeof n === 'number' ? this.slice(n) : this;
+    n = parseInt(n);
+    return typeof n === 'number' ? this.slice(n) : this;
 }
+
+Function.prototype.stopShake = function (num) {
+    debugger;
+    var time;
+    var $this = this;
+    var lazyTime = num || 1500;
+    return function () {
+
+        if (time && time + lazyTime >= Date.now()) {
+            return;
+        }
+
+        time = Date.now();
+
+        return $this.call();
+    };
+};
 
 Array.prototype.skip = skipBy;
 Array.prototype.limit = limitBy;
@@ -5233,7 +5250,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = {
     data: function data() {
-        return {};
+        return {
+            iphoneX: window.innerWidth == 375 && window.innerHeight == 812 ? true : false
+        };
     },
 
     methods: {
@@ -6139,7 +6158,7 @@ var index = function index(q) {
 // example
 var subject = function subject(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(653));
+        return q(__webpack_require__(654));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 
@@ -6176,90 +6195,90 @@ var activityComplaint = function activityComplaint(q) {
 // product
 var prodDetails = function prodDetails(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(638));
+        return q(__webpack_require__(639));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var prodCarts = function prodCarts(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(637));
+        return q(__webpack_require__(638));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 // const prodCoupon = q => require.ensure([], () => q(require('../views/prod/coupon')), 'bundle');
 var prodNotice = function prodNotice(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(639));
+        return q(__webpack_require__(640));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 // order
 var orderMaster = function orderMaster(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(629));
+        return q(__webpack_require__(630));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var orderAll = function orderAll(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(621));
+        return q(__webpack_require__(622));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var orderWaitPay = function orderWaitPay(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(634));
+        return q(__webpack_require__(635));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var orderWaitCharge = function orderWaitCharge(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(633));
+        return q(__webpack_require__(634));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var orderAlreadyConsumed = function orderAlreadyConsumed(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(622));
+        return q(__webpack_require__(623));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var orderRefund = function orderRefund(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(631));
+        return q(__webpack_require__(632));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var orderCreate = function orderCreate(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(625));
+        return q(__webpack_require__(626));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var orderDetails = function orderDetails(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(627));
+        return q(__webpack_require__(628));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var orderPay = function orderPay(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(630));
+        return q(__webpack_require__(631));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var paySuccess = function paySuccess(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(632));
+        return q(__webpack_require__(633));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var payfail = function payfail(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(628));
+        return q(__webpack_require__(629));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var orderComment = function orderComment(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(624));
+        return q(__webpack_require__(625));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var alredyComment = function alredyComment(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(623));
+        return q(__webpack_require__(624));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 //refund
 var refund = function refund(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(640));
+        return q(__webpack_require__(641));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 
@@ -6268,52 +6287,52 @@ var refund = function refund(q) {
 =========*/
 var search = function search(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(645));
+        return q(__webpack_require__(646));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var searchMaster = function searchMaster(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(647));
+        return q(__webpack_require__(648));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var searchAll = function searchAll(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(641));
+        return q(__webpack_require__(642));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var searcDiary = function searcDiary(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(642));
+        return q(__webpack_require__(643));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var searcDoctor = function searcDoctor(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(643));
+        return q(__webpack_require__(644));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var searcHospital = function searcHospital(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(644));
+        return q(__webpack_require__(645));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var searcKnow = function searcKnow(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(646));
+        return q(__webpack_require__(647));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var searcPord = function searcPord(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(648));
+        return q(__webpack_require__(649));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var searcTag = function searcTag(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(649));
+        return q(__webpack_require__(650));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var searcUser = function searcUser(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(650));
+        return q(__webpack_require__(651));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 
@@ -6371,7 +6390,7 @@ var schemeSuccess = function schemeSuccess(q) {
 =========*/
 var sign = function sign(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(652));
+        return q(__webpack_require__(653));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 
@@ -6380,7 +6399,7 @@ var sign = function sign(q) {
 =========*/
 var wikiDetail = function wikiDetail(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(654));
+        return q(__webpack_require__(655));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 
@@ -6389,12 +6408,12 @@ var wikiDetail = function wikiDetail(q) {
 =========*/
 var pointRule = function pointRule(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(636));
+        return q(__webpack_require__(637));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var agreement = function agreement(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(635));
+        return q(__webpack_require__(636));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 
@@ -6413,6 +6432,11 @@ var advDetail = function advDetail(q) {
 var stages = function stages(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
         return q(__webpack_require__(620));
+    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+};
+var stagesDesc = function stagesDesc(q) {
+    return __webpack_require__.e/* require.ensure */(0).then((function () {
+        return q(__webpack_require__(621));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 
@@ -6449,7 +6473,7 @@ var doctorDiary = function doctorDiary(q) {
 =========*/
 var service = function service(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(651));
+        return q(__webpack_require__(652));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 
@@ -6458,7 +6482,7 @@ var service = function service(q) {
 =========*/
 var orderForCrm = function orderForCrm(q) {
     return __webpack_require__.e/* require.ensure */(0).then((function () {
-        return q(__webpack_require__(626));
+        return q(__webpack_require__(627));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 
@@ -6683,6 +6707,10 @@ var routes = [{
     path: '/instalment',
     component: stages
 }, {
+    name: 'instalment.introduce',
+    path: '/instalment/introduce',
+    component: stagesDesc
+}, {
     name: 'hospital.detail',
     path: '/hospital/detail',
     component: hosptailDetail
@@ -6760,18 +6788,16 @@ var _assert = __webpack_require__(199);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import FastClick from 'fastclick'
+
+// FastClick.attach(document.body);
+
 _vue2.default.use(_auth2.default);
 _vue2.default.mixin(_mixins2.default);
 _vue2.default.use(_vueLazyload2.default);
 
 for (var key in _filters2.default) {
     _vue2.default.filter(key, _filters2.default[key]);
-}
-
-_vue2.default.prototype.iphoneX = false;
-
-if (window.innerWidth == 375 && window.innerHeight == 812) {
-    _vue2.default.prototype.iphoneX = true;
 }
 
 var onReady = function onReady(e) {

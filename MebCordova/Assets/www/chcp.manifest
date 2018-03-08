@@ -168,6 +168,10 @@
     "hash": "14f9a86fd69f4acaf089b86326961a55"
   },
   {
+    "file": "imgs/stages.jpg",
+    "hash": "5c60f34de317a24e496edb58036c58fa"
+  },
+  {
     "file": "imgs/stream-check.png",
     "hash": "593fd91083658acfddd7873018074563"
   },
@@ -221,15 +225,15 @@
   },
   {
     "file": "index.html",
-    "hash": "4ef0f85fc984b5778ee75482b2172809"
+    "hash": "43d93bd39d15ed61be5bc7012ddfd862"
   },
   {
     "file": "js/bundle.js",
-    "hash": "2fcaa2fc2441881a854085fa0209b4f3"
+    "hash": "5f3f49b2cec8eff47786bd651b78884d"
   },
   {
     "file": "js/index.js",
-    "hash": "2fd11317cac77582cc66a8c485edc301"
+    "hash": "6a32adf764476aa079d70f34029f8723"
   },
   {
     "file": "js/manifest.js",

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MebCordova'
-  s.version          = '0.1.0'
+  s.version          = '7.10'
   s.summary          = '美呗 APP 上需要用到的cordova 的代码.'
 
   #添加第三方依赖
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
   s.homepage         = 'https://github.com/titer18/MebCordova'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'hz' => 'zhaohong1991@hotmail.com' }
+  s.author           = { 'titer' => 'zhaohong1991@hotmail.com' }
   s.source           = { :git => 'https://github.com/titer18/MebCordova.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'

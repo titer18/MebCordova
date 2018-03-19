@@ -16,21 +16,6 @@
 
 @implementation MBCDVViewController
 
-- (instancetype)init
-{
-    self = [super init];
-    
-    if (self) {
-        // 获取bundle参数
-        NSBundle *bundle = [NSBundle bundleForClass:self.class];
-        self.wwwFolderName = [bundle pathForResource:@"www" ofType:nil];
-        self.startPage = [bundle pathForResource:@"index" ofType:@"html"];
-        self.configFile = [bundle pathForResource:@"config" ofType:@"xml"];
-    }
-    
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -53,10 +38,11 @@
     [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
--(void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated
+{
     [super viewDidAppear:animated];
     
-    CGRect newFrame = self.webView.frame;
+    CGRect newFrame = self.webView.bounds;
     CGFloat screenHeight = [[UIScreen mainScreen]bounds].size.height;
     
     newFrame.size = CGSizeMake(newFrame.size.width, screenHeight );

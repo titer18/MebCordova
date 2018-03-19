@@ -41,15 +41,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var defaultHeaders = function defaultHeaders() {
 
     if (!window.cordova) {
-        // return {
-        //     "UserToken": "bZuKHnGUCAQyCUIDxy2jnuMYk%2fdmEg9ZRjhofq7hfXYsdo38DmPfUU6k9mqwNomlpTIdkmrOFPU4LF" +
-        //             "Rs4xH5%2fQZ8%2bUJ34XEHshH70UBYwSZUKU0gZsxvRENE51Jerwnt",
-        //     "MebDeviceId": '651DE7BF-329D-4C2C-A750-24D6F78593BA'
-        // };
         return {
-            "UserToken": "vRY7jc%2b%2byebA44XMeKwT%2fJoMh94yLgw%2bSvYRbr8uaF2gvC7Qy2ZSUZQYOsT0ur8zXVRFBcdUFY1T46a%2fXvjzaNB6IccoyQD6ezXabxIPYSDWvJHotH0AZSHOhXG2edJi",
+            "UserToken": "bZuKHnGUCAQyCUIDxy2jnuMYk%2fdmEg9ZRjhofq7hfXYsdo38DmPfUU6k9mqwNomlpTIdkmrOFPU4LF" + "Rs4xH5%2fQZ8%2bUJ34XEHshH70UBYwSZUKU0gZsxvRENE51Jerwnt",
             "MebDeviceId": '651DE7BF-329D-4C2C-A750-24D6F78593BA'
         };
+        // return {
+        //     "UserToken": "vRY7jc%2b%2byebA44XMeKwT%2fJoMh94yLgw%2bSvYRbr8uaF2gvC7Qy2ZSUZQYOsT0ur8zXVRFBcdUFY1T46a%2fXvjzaNB6IccoyQD6ezXabxIPYSDWvJHotH0AZSHOhXG2edJi",
+        //     "MebDeviceId": '651DE7BF-329D-4C2C-A750-24D6F78593BA'
+        // };
     }
 
     var headers = {

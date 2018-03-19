@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MebCordova'
-  s.version          = '7.10'
+  s.version          = '7.10.2'
   s.summary          = '美呗 APP 上需要用到的cordova 的代码.'
 
   #添加第三方依赖

@@ -325,7 +325,7 @@
 }
 
 .m-tab {
-  color: #FFF;
+  color: #fff;
   position: relative;
   z-index: 100;
   width: 100%;
@@ -471,6 +471,130 @@
 }
 .vux-swipeout-button-default {
   background-color: #eee;
+}
+
+html,
+body,
+.m-container,
+.m-wrap {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.m-header,
+.m-footer {
+  position: fixed;
+  background: #fff;
+  z-index: 999;
+}
+.m-header {
+  width: 100%;
+  height: 1.1rem;
+  top: 0;
+  left: 0;
+}
+.m-center {
+  background: #f5f5f5;
+  height: 100%;
+  position: relative;
+}
+.m-footer {
+  width: 100%;
+  height: 1.1rem;
+  left: 0;
+  bottom: 0;
+}
+.m-header-button {
+  -webkit-box-flex: .5;
+  -ms-flex: .5;
+  flex: .5;
+}
+.m-header {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 0.3rem;
+  text-align: center;
+  white-space: nowrap;
+  color: #333;
+}
+.m-header-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: inherit;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: normal;
+  color: #222;
+}
+.header-is-left {
+  text-align: left;
+}
+.header-is-right {
+  text-align: right;
+}
+.m-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  color: #333;
+}
+.m-center {
+  width: 100%;
+}
+a {
+  color: #333;
+}
+.m-header ~ .m-center {
+  border-top: 1.1rem solid transparent;
+}
+.m-footer ~ .m-center {
+  border-bottom: 1.1rem solid transparent;
+}
+.mint-toast,
+.is-placetop {
+  position: fixed;
+  color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 1000;
+  transition: opacity .2s linear;
+  min-width: 100%;
+  min-height: 0.5rem;
+  line-height: 0.5rem;
+  background: #ff8686;
+  color: #ffffff;
+  padding: 0;
+  border-radius: 0;
+  transition: none;
+  top: -0.5rem;
+  -webkit-animation: toatsAnimation 2s 1;
+  z-index: 888;
+  font-size: 3.5vw;
+}
+@-webkit-keyframes toatsAnimation {
+0% {
+    top: 0;
+}
+10% {
+    top: 1.1rem;
+}
+50% {
+    top: 1.1rem;
+}
+90% {
+    top: -1.1rem;
+}
+100% {
+    top: -1.1rem;
+}
 }
 html,
 body,
@@ -1042,4 +1166,195 @@ body {
     padding: .3rem;
     text-align: center;
     color: #a4a4a4;
+}
+
+.inner-border[data-v-386fd38d] {
+  width: 100%;
+  height: .2rem;
+  background: #f5f5f5;
+}
+.refresh[data-v-386fd38d] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0.5rem;
+  background: #f5f5f5;
+  width: 1.8rem;
+  border-radius: 5px;
+  font-size: 3.12vw;
+  color: #333;
+}
+.refresh img[data-v-386fd38d] {
+  width: 0.3rem;
+  margin-right: 0.1rem;
+}
+.animated[data-v-386fd38d] {
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+}
+@-webkit-keyframes rotate {
+from {
+    -webkit-transform: rotate(0deg);
+}
+to {
+    -webkit-transform: rotate(360deg);
+}
+}
+@-moz-keyframes rotate {
+from {
+    -moz-transform: rotate(0deg);
+}
+to {
+    -moz-transform: rotate(360deg);
+}
+}
+.rotateDom[data-v-386fd38d] {
+  display: block;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 1s;
+  -o-transition-property: -o-transform;
+  -o-transition-duration: 1s;
+  -ms-transition-property: -ms-transform;
+  -ms-transition-duration: 1s;
+  -webkit-animation: rotate 1s linear infinite;
+  -moz-animation: rotate 1s linear infinite;
+  -o-animation: rotate 1s linear infinite;
+  -ms-animation: rotate 1s linear infinite;
+  animation: rotate 1s linear infinite;
+}
+@-o-keyframes rotate {
+from {
+    -o-transform: rotate(0deg);
+}
+to {
+    -o-transform: rotate(360deg);
+}
+}
+@-webkit-keyframes rightIn {
+from {
+    right: -100vw;
+}
+to {
+    right: 0;
+}
+}
+.childRightIn[data-v-386fd38d] {
+  -webkit-animation-name: rightIn;
+}
+@-webkit-keyframes rightOut {
+from {
+    right: 0;
+}
+to {
+    right: -100vw;
+}
+}
+.childRightOut[data-v-386fd38d] {
+  -webkit-animation-name: rightOut;
+}
+.hot-tag-container[data-v-386fd38d] {
+  display: flex;
+  flex-wrap: wrap;
+}
+.city-container[data-v-386fd38d] {
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  display: flex;
+  position: relative;
+}
+.select-left[data-v-386fd38d],
+.select-right[data-v-386fd38d] {
+  width: 6.9rem;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.select-right[data-v-386fd38d] {
+  padding: 0.3rem 0;
+  width: 0.6rem;
+  background: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3.12vw;
+  color: #999;
+}
+.select-right div[data-v-386fd38d] {
+  line-height: 0.65rem;
+}
+.item-title[data-v-386fd38d] {
+  background: #f8f8f8;
+  padding: 0.3rem;
+  font-size: 3.38vw;
+  color: #999;
+  font-weight: bold;
+}
+.item-inner[data-v-386fd38d] {
+  background: #fff;
+  padding: 0.3rem;
+  font-size: 3.64vw;
+  color: #333;
+  border-bottom: 0.01rem solid #e1e1e1;
+}
+.item-inner[data-v-386fd38d]:last-child {
+  border: none;
+}
+.hots-tag[data-v-386fd38d] {
+  width: 1.82rem;
+  height: 0.8rem;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hots-tag[data-v-386fd38d]:nth-child(2),
+.hots-tag[data-v-386fd38d]:nth-child(5) {
+  margin: 0 0.4rem;
+}
+.hots-tag[data-v-386fd38d]:nth-child(4),
+.hots-tag[data-v-386fd38d]:nth-child(5),
+.hots-tag[data-v-386fd38d]:nth-child(6) {
+  margin-top: 0.25rem;
+}
+.active[data-v-386fd38d] {
+  color: #ff8686;
+}
+.child-container[data-v-386fd38d] {
+  position: absolute;
+  z-index: 1000;
+  width: 100vw;
+  height: 100%;
+  right: -100vw;
+}
+.child-container .child-pop[data-v-386fd38d] {
+  width: 100vw;
+  height: 100%;
+}
+.child-container .child-inner[data-v-386fd38d] {
+  width: 5.5rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0px 0px 18px #999;
+}
+.child-container .child-inner .parent-name[data-v-386fd38d] {
+  font-size: 3.9vw;
+  color: #333;
+  padding: 0.3rem;
+}
+.child-container .child-inner .child-item[data-v-386fd38d] {
+  font-size: 3.9vw;
+  color: #333;
+  padding: 0.3rem;
+  border-bottom: 0.01rem solid #e1e1e1;
+}
+.child-container .child-inner .child-item[data-v-386fd38d]:last-child {
+  border: none;
 }
